@@ -4,8 +4,8 @@
     <title>Bishram Acharya</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Bishram Acharya is free PSD &amp; HTML template by @afnizarnur">
-    <meta name="author" content="">
+    <meta name="description" content="Bishram Acharya's personal website">
+    <meta name="author" content="Bishram Acharya">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/kube.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -22,10 +22,24 @@
             font-size: 18px !important;
             line-height: 1.8 !important;
         }
+        /* Increase container width */
+        .container {
+            max-width: 1000px !important;
+        }
+        /* Navigation styles */
+        .navbar ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .navbar ul li {
+            white-space: nowrap;
+        }
         /* Timeline styles */
         .timeline {
             position: relative;
-            padding-left: 50px;
+            padding-left: 30px;
+            margin-bottom: 40px;
         }
         .timeline:before {
             content: '';
@@ -36,19 +50,31 @@
             width: 2px;
             background: #e0e0e0;
         }
-        .timeline li {
+        .timeline-header {
             position: relative;
-            margin-bottom: 30px;
         }
-        .timeline li:before {
+        .timeline-header:before {
             content: '';
             position: absolute;
-            left: -54px;
-            top: 5px;
+            left: -34px;
+            top: 50%;
             width: 10px;
             height: 10px;
             border-radius: 50%;
             background: #333;
+            transform: translateY(-50%);
+        }
+        .timeline-content {
+            padding-left: 0;
+        }
+        .timeline-date {
+            color: #666;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+        /* Section spacing */
+        .section {
+            margin-bottom: 60px;
         }
     </style>
 </head>
@@ -98,18 +124,26 @@
     <div class="work section second" id="education">
         <div class="container">
             <h1>Education</h1>
-            <ul class="work-list timeline">
-                <li>2019 - 2024</li>
-                <li><a href="#">BE in Computer Engineering</a></li>
-                <li>Pulchowk Campus, Institute of Engineering</li>
-                <li>Major: Computer Engineering | CGPA: 3.8/4.0</li>
-            </ul>
-            <ul class="work-list timeline">
-                <li>2017 - 2019</li>
-                <li><a href="#">Higher Secondary Education</a></li>
-                <li>St. Xavier's College, Maitighar</li>
-                <li>Science Stream | GPA: 3.9/4.0</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">BE in Computer Engineering</a></h3>
+                    <div class="timeline-date">2019 - 2024</div>
+                </div>
+                <div class="timeline-content">
+                    <p>Pulchowk Campus, Institute of Engineering</p>
+                    <p>Major: Computer Engineering | CGPA: 3.8/4.0</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">Higher Secondary Education</a></h3>
+                    <div class="timeline-date">2017 - 2019</div>
+                </div>
+                <div class="timeline-content">
+                    <p>St. Xavier's College, Maitighar</p>
+                    <p>Science Stream | GPA: 3.9/4.0</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -117,18 +151,26 @@
     <div class="work section second" id="experiences">
         <div class="container">
             <h1>Work<br>Experiences</h1>
-            <ul class="work-list timeline">
-                <li>Sept 2024 - Present</li>
-                <li><a href="#">Research Intern - NAAMII</a></li>
-                <li>- Built pipeline for ISIC skin lesion classification challenge</li>
-                <li>- Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement</li>
-            </ul>
-            <ul class="work-list timeline">
-                <li>2023 - Present</li>
-                <li><a href="#">Freelancer - Upwork</a></li>
-                <li>- Built a Python Application for automatic news extraction and display from skynews.au.</li>
-                <li>- Built a data scraper for a real estate website</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">Research Intern - NAAMII</a></h3>
+                    <div class="timeline-date">Sept 2024 - Present</div>
+                </div>
+                <div class="timeline-content">
+                    <p>- Built pipeline for ISIC skin lesion classification challenge</p>
+                    <p>- Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">Freelancer - Upwork</a></h3>
+                    <div class="timeline-date">2023 - Present</div>
+                </div>
+                <div class="timeline-content">
+                    <p>- Built a Python Application for automatic news extraction and display from skynews.au.</p>
+                    <p>- Built a data scraper for a real estate website</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -136,24 +178,26 @@
     <div class="work section second" id="experiences">
         <div class="container">
             <h1>Projects<br>Highlight</h1>
-            <ul class="work-list timeline">
-                <li>Final Year Major Project</li>
-                <li><a href="#">AI Generated Image Detection</a></li>
-                <li>- Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP</li>
-                <li>- Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model</li>
-            </ul>
-            <ul class="work-list timeline">
-                <li>Third Year Minor Project</li>
-                <li><a href="#">Cross Platform Fingerprint Matching Using CNN</a></li>
-                <li>- Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match.</li>
-                <li>- Achieved 89.2% accuracy</li>
-            </ul>
-            <ul class="work-list timeline">
-                <li>Data Science Project</li>
-                <li><a href="#">Bitcoin Portfolio Analysis: Risk, Returns & Optimization</a></li>
-                <li>- Analyzed Bitcoin's risk and return profile in comparison to traditional assets like the S&P 500 and Gold</li>
-                <li>- Evaluated the impact of adding Bitcoin to a traditional portfolio on overall performance and risk-adjusted returns</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">AI Generated Image Detection</a></h3>
+                    <div class="timeline-date">Final Year Major Project</div>
+                </div>
+                <div class="timeline-content">
+                    <p>- Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP</p>
+                    <p>- Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">Cross Platform Fingerprint Matching Using CNN</a></h3>
+                    <div class="timeline-date">Third Year Minor Project</div>
+                </div>
+                <div class="timeline-content">
+                    <p>- Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match.</p>
+                    <p>- Achieved 89.2% accuracy</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -161,16 +205,24 @@
     <div class="work section second" id="events">
         <div class="container">
             <h1>Events &amp;<br>Workshops</h1>
-            <ul class="work-list timeline">
-                <li>March 2024</li>
-                <li><a href="#">AI Summit Nepal 2024</a></li>
-                <li>Presented research on AI-generated image detection methods</li>
-            </ul>
-            <ul class="work-list timeline">
-                <li>January 2024</li>
-                <li><a href="#">Deep Learning Workshop</a></li>
-                <li>Conducted a 3-day workshop on PyTorch and Computer Vision</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">AI Summit Nepal 2024</a></h3>
+                    <div class="timeline-date">March 2024</div>
+                </div>
+                <div class="timeline-content">
+                    <p>Presented research on AI-generated image detection methods</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3><a href="#">Deep Learning Workshop</a></h3>
+                    <div class="timeline-date">January 2024</div>
+                </div>
+                <div class="timeline-content">
+                    <p>Conducted a 3-day workshop on PyTorch and Computer Vision</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -178,30 +230,24 @@
     <div class="award section second" id="achievements">
         <div class="container">
             <h1>Certifications &amp;<br>Achievements</h1>
-
-            <ul class="award-list list-flat">
-                <li><i>Coursera - Andrew Ng</i></li>
-                <li>•Deep Learning Specialization</li>
-                <li><a href="https://www.credly.com/badges/9262f133-db26-4428-baa8-0cf9e496a2a0/linked_in_profile">Certificate</a></li>
-            </ul>
-
-            <ul class="award-list list-flat">
-                <li><i>Samsung Innovation Campus</i></li>
-                <li>•Artificial Intelligence Course</li>
-                <li><a href="https://raw.githubusercontent.com/bishram-acharya/Samsung-Innovation-Campus-Applied-Data-Science/refs/heads/main/cert.jpg">Certificate</a></li>
-            </ul>
-
-            <ul class="award-list list-flat">
-                <li><i>Udemy</i></li>
-                <li>•Complete Python Developer Course</li>
-                <li><a href="https://www.udemy.com/certificate/UC-d646b4c7-b39a-4249-bcbc-58bf176bea29/">Certificate</a></li>
-            </ul>
-
-            <ul class="award-list list-flat">
-                <li><i>Udemy</i></li>
-                <li>•Complete Data Science & Machine Learning Bootcamp</li>
-                <li><a href="https://www.udemy.com/certificate/UC-cd7917c1-9d34-43d0-9310-64e09e56ac8e/">Certificate</a></li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3>Deep Learning Specialization</h3>
+                    <div class="timeline-date">Coursera - Andrew Ng</div>
+                </div>
+                <div class="timeline-content">
+                    <p><a href="https://www.credly.com/badges/9262f133-db26-4428-baa8-0cf9e496a2a0/linked_in_profile">View Certificate</a></p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-header">
+                    <h3>Artificial Intelligence Course</h3>
+                    <div class="timeline-date">Samsung Innovation Campus</div>
+                </div>
+                <div class="timeline-content">
+                    <p><a href="https://raw.githubusercontent.com/bishram-acharya/Samsung-Innovation-Campus-Applied-Data-Science/refs/heads/main/cert.jpg">View Certificate</a></p>
+                </div>
+            </div>
         </div>
     </div>
 
