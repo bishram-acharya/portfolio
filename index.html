@@ -11,206 +11,253 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/custom.min.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<style>
-		.intro h1:before {
-			/* Edit this with your name or anything else */
-			content: 'NAMASTE';
-		}
-	</style>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        .intro h1:before {
+            content: 'NAMASTE';
+        }
+        /* Increased text size */
+        p, li {
+            font-size: 18px !important;
+            line-height: 1.8 !important;
+        }
+        /* Timeline styles */
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e0e0e0;
+        }
+        .timeline li {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline li:before {
+            content: '';
+            position: absolute;
+            left: -54px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #333;
+        }
+    </style>
 </head>
 <body>
-	<!-- Navigation -->
-	<div class="main-nav">
-		<div class="container">
-			<header class="group top-nav">
-				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-				    <span class="logo"></span>
-				</div>
-			    <nav id="navbar-1" class="navbar item-nav">
-				    <ul>
-				        <li class="active"><a href="#about">About</a></li>
-				        <li><a href="#experiences">Experiences</a></li>
-				        <li><a href="#achievements">Achievements</a></li>
-				        <li><a href="#skills">Skills</a></li>
-					<li><a href="articles.html">Articles</a></li>
-					<li><a href="my_cv.pdf" target="_blank">CV</a></li>
-				    </ul>
-				</nav>
-			</header>
-		</div>
-	</div>
+    <!-- Navigation -->
+    <div class="main-nav">
+        <div class="container">
+            <header class="group top-nav">
+                <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+                    <span class="logo"></span>
+                </div>
+                <nav id="navbar-1" class="navbar item-nav">
+                    <ul>
+                        <li class="active"><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                        <li><a href="my_cv.pdf" target="_blank">CV</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
 
-	<!-- Introduction -->
-	<div class="intro section" id="about">
-		<div class="container">
-			<p style="font-size: 24px;">Hi, I’m <strong>Bishram Acharya</strong></p>
-			<div class="units-row units-split wrap">
-				<div class="unit-20">
-					<img src="img/bishram.png" alt="Avatar">
-				</div>
-				<div class="unit-80">
-					<h1>I am <br><span id="typed"></span></h1>
-				</div>
-				<p>
-					I am a Computer Engineering graduate from Pulchowk Campus, IOE, with a strong interest in Computer Vision, Convolutional Neural Networks (CNNs), Vision Language Models, Python scripting, and Data scraping. I am eager to collaborate on research projects and gain industry experience, particularly in the field of Artificial Intelligence.
-				</p>
-			</div>
-		</div>
-	</div>
+    <!-- Introduction -->
+    <div class="intro section" id="about">
+        <div class="container">
+            <p style="font-size: 24px;">Hi, I'm <strong>Bishram Acharya</strong></p>
+            <div class="units-row units-split wrap">
+                <div class="unit-20">
+                    <img src="img/bishram.png" alt="Avatar">
+                </div>
+                <div class="unit-80">
+                    <h1>I am <br><span id="typed"></span></h1>
+                </div>
+                <p>
+                    I am a Computer Engineering graduate from Pulchowk Campus, IOE, with a strong interest in Computer Vision, Convolutional Neural Networks (CNNs), Vision Language Models, Python scripting, and Data scraping. I am eager to collaborate on research projects and gain industry experience, particularly in the field of Artificial Intelligence.
+                </p>
+            </div>
+        </div>
+    </div>
 
-	<!-- Work Experience -->
-	<div class="work section second" id="experiences">
-		<div class="container">
-			<h1>Work<br>Experiences</h1>
-			<ul class="work-list">
-				<li>Sept 2024 - Present</li>
-				<li><a href="#">Research Intern - NAAMII</a></li>
-				<li>- Built pipeline for ISIC skin lesion classification challenge</li>
-				<li>- Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement</li>
-			</ul>
-			<ul class="work-list">
-				<li>2023 - Present</li>
-				<li><a href="#">Freelancer - Upwork</a></li>
-				<li>- Built a Python Application for automatic news extraction and display from skynews.au.</li>
-				<li>- Built a data scraper for a real estate website</li>
-			</ul>
-			
-			
-		</div>
-	</div>
+    <!-- Education Section -->
+    <div class="work section second" id="education">
+        <div class="container">
+            <h1>Education</h1>
+            <ul class="work-list timeline">
+                <li>2019 - 2024</li>
+                <li><a href="#">BE in Computer Engineering</a></li>
+                <li>Pulchowk Campus, Institute of Engineering</li>
+                <li>Major: Computer Engineering | CGPA: 3.8/4.0</li>
+            </ul>
+            <ul class="work-list timeline">
+                <li>2017 - 2019</li>
+                <li><a href="#">Higher Secondary Education</a></li>
+                <li>St. Xavier's College, Maitighar</li>
+                <li>Science Stream | GPA: 3.9/4.0</li>
+            </ul>
+        </div>
+    </div>
 
+    <!-- Work Experience -->
+    <div class="work section second" id="experiences">
+        <div class="container">
+            <h1>Work<br>Experiences</h1>
+            <ul class="work-list timeline">
+                <li>Sept 2024 - Present</li>
+                <li><a href="#">Research Intern - NAAMII</a></li>
+                <li>- Built pipeline for ISIC skin lesion classification challenge</li>
+                <li>- Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement</li>
+            </ul>
+            <ul class="work-list timeline">
+                <li>2023 - Present</li>
+                <li><a href="#">Freelancer - Upwork</a></li>
+                <li>- Built a Python Application for automatic news extraction and display from skynews.au.</li>
+                <li>- Built a data scraper for a real estate website</li>
+            </ul>
+        </div>
+    </div>
 
-	<div class="work section second" id="experiences">
-		<div class="container">
-			<h1>Projects<br>Highlight</h1>
-			<ul class="work-list">
-				<li>Final Year Major Project</li>
-				<li><a href="#">AI Generated Image Detection</a></li>
-				<li>- Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP </li>
-				<li>- Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model</li>
-			</ul>
-			<ul class="work-list">
-				<li>Third Year Minor Project</li>
-				<li><a href="#">Cross Platform Fingerprint Matching Using CNN</a></li>
-				<li>- Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match.</li>
-				<li>- Achieved 89.2% accuracy</li>
-			</ul>
-			<ul class="work-list">
-				<li>Data Science Project</li>
-				<li><a href="#">Bitcoin Portfolio Analysis: Risk, Returns & Optimization</a></li>
-				<li>- Analyzed Bitcoin's risk and return profile in comparison to traditional assets like the S&P 500 and Gold</li>
-				<li>- Evaluated the impact of adding Bitcoin to a traditional portfolio on overall performance and risk-adjusted returns </li>
-			</ul>
-			
-			
-		</div>
-	</div>
+    <!-- Projects Section -->
+    <div class="work section second" id="experiences">
+        <div class="container">
+            <h1>Projects<br>Highlight</h1>
+            <ul class="work-list timeline">
+                <li>Final Year Major Project</li>
+                <li><a href="#">AI Generated Image Detection</a></li>
+                <li>- Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP</li>
+                <li>- Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model</li>
+            </ul>
+            <ul class="work-list timeline">
+                <li>Third Year Minor Project</li>
+                <li><a href="#">Cross Platform Fingerprint Matching Using CNN</a></li>
+                <li>- Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match.</li>
+                <li>- Achieved 89.2% accuracy</li>
+            </ul>
+            <ul class="work-list timeline">
+                <li>Data Science Project</li>
+                <li><a href="#">Bitcoin Portfolio Analysis: Risk, Returns & Optimization</a></li>
+                <li>- Analyzed Bitcoin's risk and return profile in comparison to traditional assets like the S&P 500 and Gold</li>
+                <li>- Evaluated the impact of adding Bitcoin to a traditional portfolio on overall performance and risk-adjusted returns</li>
+            </ul>
+        </div>
+    </div>
 
+    <!-- Events Section -->
+    <div class="work section second" id="events">
+        <div class="container">
+            <h1>Events &amp;<br>Workshops</h1>
+            <ul class="work-list timeline">
+                <li>March 2024</li>
+                <li><a href="#">AI Summit Nepal 2024</a></li>
+                <li>Presented research on AI-generated image detection methods</li>
+            </ul>
+            <ul class="work-list timeline">
+                <li>January 2024</li>
+                <li><a href="#">Deep Learning Workshop</a></li>
+                <li>Conducted a 3-day workshop on PyTorch and Computer Vision</li>
+            </ul>
+        </div>
+    </div>
 
-	
+    <!-- Award & Achievements -->
+    <div class="award section second" id="achievements">
+        <div class="container">
+            <h1>Certifications &amp;<br>Achievements</h1>
 
-	<!-- Award & Achievements -->
-	<div class="award section second" id="achievements">
-		<div class="container">
-			<h1>Certifications &amp;<br>Achievements</h1>
+            <ul class="award-list list-flat">
+                <li><i>Coursera - Andrew Ng</i></li>
+                <li>•Deep Learning Specialization</li>
+                <li><a href="https://www.credly.com/badges/9262f133-db26-4428-baa8-0cf9e496a2a0/linked_in_profile">Certificate</a></li>
+            </ul>
 
-			<ul class="award-list list-flat">
-				<li><i>Coursera - Andrew Ng</i></li>
-				<li>•Deep Learning Specialization</li>
-				<li><a href="https://www.credly.com/badges/9262f133-db26-4428-baa8-0cf9e496a2a0/linked_in_profile">Certificate</a></li>
-			</ul>
+            <ul class="award-list list-flat">
+                <li><i>Samsung Innovation Campus</i></li>
+                <li>•Artificial Intelligence Course</li>
+                <li><a href="https://raw.githubusercontent.com/bishram-acharya/Samsung-Innovation-Campus-Applied-Data-Science/refs/heads/main/cert.jpg">Certificate</a></li>
+            </ul>
 
-			<ul class="award-list list-flat">
-				<li><i>Samsung Innovation Campus</i></li>
-				<li>•Artificial Intelligence Course </li>
-				<li><a href="https://raw.githubusercontent.com/bishram-acharya/Samsung-Innovation-Campus-Applied-Data-Science/refs/heads/main/cert.jpg">Certificate</a></li>
-			</ul>
-			<ul class="award-list list-flat">
-				<li><i>Udemy</i></li>
-				<li>•Complete Python Developer Course</li>
-				<li><a href="https://www.udemy.com/certificate/UC-d646b4c7-b39a-4249-bcbc-58bf176bea29/">Certificate</a></li>
-			</ul>
+            <ul class="award-list list-flat">
+                <li><i>Udemy</i></li>
+                <li>•Complete Python Developer Course</li>
+                <li><a href="https://www.udemy.com/certificate/UC-d646b4c7-b39a-4249-bcbc-58bf176bea29/">Certificate</a></li>
+            </ul>
 
-			<ul class="award-list list-flat">
-				<li><i>Udemy</i></li>
-				<li>•Complete Data Science & Machine Learning Bootcamp</li>
-				<li><a href="https://www.udemy.com/certificate/UC-cd7917c1-9d34-43d0-9310-64e09e56ac8e/">Certificate</a></li>
-			</ul>
-		
-			<ul class="award-list list-flat">
-				<li><i>Coursera - Andrew Ng</i></li>
-				<li>•Custom Models, Layers, and Loss Functions with TensorFlow</li>
-				<li><a href="https://coursera.org/share/54079c26105d252c8b24b1e8999841ce">Certificate</a></li>
-			</ul>
+            <ul class="award-list list-flat">
+                <li><i>Udemy</i></li>
+                <li>•Complete Data Science & Machine Learning Bootcamp</li>
+                <li><a href="https://www.udemy.com/certificate/UC-cd7917c1-9d34-43d0-9310-64e09e56ac8e/">Certificate</a></li>
+            </ul>
+        </div>
+    </div>
 
-			<ul class="award-list list-flat">
-				<li><i>Coursera</i></li>
-				<li>•Generative AI with Large Language Models</li>
-				<li><a href="https://www.coursera.org/account/accomplishments/records/7UFSUJTNG8DA">Certificate</a></li>
-			</ul>
+    <!-- Technical Skills -->
+    <div class="skills section second" id="skills">
+        <div class="container">
+            <h1>Technical<br>Skills</h1>
+            <ul class="skill-list list-flat">
+                <li>Programming</li>
+                <li>Python/ C++/ C</li>
+            </ul>
+            <ul class="skill-list list-flat">
+                <li>Database</li>
+                <li>MySQL/ NoSQL</li>
+            </ul>
+            <ul class="skill-list list-flat">
+                <li>Framework and Libraries</li>
+                <li>Pandas/ Numpy/ Matplotlib/ PyTorch/ TensorFlow/ OpenCV</li>
+            </ul>
+        </div>
+    </div>
 
-			
-	
-	</div>
+    <!-- Quote -->
+    <div class="quote">
+        <div class="container text-centered">
+            <h1>subtlety outlasts grand ambition</h1>
+        </div>
+    </div>
 
-	<!-- Technical Skills -->
-	<div class="skills section second" id="skills">
-		<div class="container">
-			<h1>Technical<br>Skills</h1>
-			<ul class="skill-list list-flat">
-				<li>Programming</li>
-				<li>Python/ C++/ C</li>
-			</ul>
-			<ul class="skill-list list-flat">
-				<li>Database</li>
-				<li>MySQL/ NoSQL</li>
-				
-			</ul>
-			<ul class="skill-list list-flat">
-				<li>Framework and Libraries</li>
-				<li>Pandas/ Numpy/ Matplotlib/ PyTorch/ TensorFlow/ OpenCV</li>
-			</ul>
-		</div>
-	</div>
+    <footer>
+        <div class="container">
+            <div class="units-row">
+                <div class="unit-50">
+                    <p>Reach out to me : </p>
+                </div>
+                <div class="unit-50">
+                    <ul class="social list-flat right">
+                        <li><a href="mailto:bisram019@gmail.com"><i class="fa fa-send"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/bishram-acharya/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/bisram._/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.upwork.com/freelancers/~01170c58105056f06c"><i class="fa fa-institution"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	<!-- Quote -->
-	<div class="quote">
-		<div class="container text-centered">
-			<h1>subtlety outlasts grand ambition</h1>
-		</div>
-	</div>
-
-	<footer>
-		<div class="container">
-			<div class="units-row">
-			    <div class="unit-50">
-			    	<p>Reach out to me : </p>
-			    </div>
-			    <div class="unit-50">
-					<ul class="social list-flat right">
-						<li><a href="mailto:bisram019@gmail.com"><i class="fa fa-send"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/bishram-acharya/"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="https://www.instagram.com/bisram._/?hl=en"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="https://www.upwork.com/freelancers/~01170c58105056f06c"><i class="fa fa-institution"></i></a></li>
-					</ul>
-			    </div>
-			</div>
-		</div>
-	</footer>
-
-	<!-- Javascript -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/typed.min.js"></script>
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/typed.min.js"></script>
     <script src="js/kube.min.js"></script>
     <script src="js/site.js"></script>
     <script>
-		function newTyped(){}$(function(){$("#typed").typed({
-		// Change to edit type effect
-		strings: ["A Computer Engineer", "An Aspiring AI Researcher"],
-
-		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+        function newTyped(){}$(function(){$("#typed").typed({
+        strings: ["A Computer Engineer", "An Aspiring AI Researcher"],
+        typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
     </script>
 </body>
 </html>
