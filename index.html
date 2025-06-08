@@ -36,13 +36,52 @@
             white-space: nowrap;
         }
         
+        /* Make profile picture 2x bigger */
+        .intro img {
+            width: 162px !important;
+            height: 162px !important;
+            border-radius: 99px;
+        }
+        
+        /* Timeline Container */
+        .timeline-container {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        /* Vertical Timeline Line */
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #333, #666, #999);
+            border-radius: 2px;
+        }
+        
+        /* Timeline Dots */
+        .timeline-dot {
+            position: absolute;
+            left: 12px;
+            top: 30px;
+            width: 18px;
+            height: 18px;
+            background: #333;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #333;
+            z-index: 2;
+        }
+        
         /* Hover Box Styles */
         .hover-box {
             background: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 25px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             cursor: pointer;
@@ -102,6 +141,97 @@
             font-style: italic;
         }
         
+        /* Project Box with Photo Placeholder */
+        .project-box {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            min-height: 200px;
+        }
+        
+        .project-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #333;
+        }
+        
+        .project-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #333, #666);
+            transition: left 0.3s ease;
+            z-index: 1;
+        }
+        
+        .project-box:hover:before {
+            left: 0;
+        }
+        
+        .project-photo {
+            width: 200px;
+            min-height: 200px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-photo:before {
+            content: '📷';
+            font-size: 3em;
+            color: #999;
+            opacity: 0.5;
+        }
+        
+        .project-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .project-content {
+            flex: 1;
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+        
+        .project-content .date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .project-content .description {
+            color: #4e4e4e;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
         /* Section spacing */
         .section {
             margin-bottom: 60px;
@@ -148,14 +278,47 @@
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .timeline-container {
+                padding-left: 30px;
+            }
+            
+            .timeline-container:before {
+                left: 15px;
+            }
+            
+            .timeline-dot {
+                left: 7px;
+            }
+            
             .hover-box {
                 padding: 20px;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .project-box {
+                flex-direction: column;
+                min-height: auto;
+            }
+            
+            .project-photo {
+                width: 100%;
+                min-height: 150px;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            .project-content {
+                padding: 20px;
             }
             
             .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 15px;
+            }
+            
+            .intro img {
+                width: 120px !important;
+                height: 120px !important;
             }
         }
     </style>
@@ -207,18 +370,22 @@
         <div class="container">
             <h1>Education</h1>
             
-            <div class="hover-box">
-                <h3>BE in Computer Engineering</h3>
-                <div class="date">2019 - 2024</div>
-                <div class="institution">Pulchowk Campus, Institute of Engineering</div>
-                <div class="details">Major: Computer Engineering | Average Score 80%</div>
-            </div>
-            
-            <div class="hover-box">
-                <h3>Higher Secondary Education</h3>
-                <div class="date">2017 - 2019</div>
-                <div class="institution">St. Xavier's College, Maitighar</div>
-                <div class="details">Science Stream | GPA: 3.9/4.0</div>
+            <div class="timeline-container">
+                <div class="timeline-dot"></div>
+                <div class="hover-box">
+                    <h3>BE in Computer Engineering</h3>
+                    <div class="date">2019 - 2024</div>
+                    <div class="institution">Pulchowk Campus, Institute of Engineering</div>
+                    <div class="details">Major: Computer Engineering | Average Score 80%</div>
+                </div>
+                
+                <div class="timeline-dot" style="top: 260px;"></div>
+                <div class="hover-box">
+                    <h3>Higher Secondary Education</h3>
+                    <div class="date">2017 - 2019</div>
+                    <div class="institution">St. Xavier's College, Maitighar</div>
+                    <div class="details">Science Stream | GPA: 3.9/4.0</div>
+                </div>
             </div>
         </div>
     </div>
@@ -228,21 +395,25 @@
         <div class="container">
             <h1>Work<br>Experiences</h1>
             
-            <div class="hover-box">
-                <h3>Research Intern - NAAMII</h3>
-                <div class="date">Sept 2024 - Present</div>
-                <div class="description">
-                    • Built pipeline for ISIC skin lesion classification challenge<br>
-                    • Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement
+            <div class="timeline-container">
+                <div class="timeline-dot"></div>
+                <div class="hover-box">
+                    <h3>Research Intern - NAAMII</h3>
+                    <div class="date">Sept 2024 - Present</div>
+                    <div class="description">
+                        • Built pipeline for ISIC skin lesion classification challenge<br>
+                        • Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement
+                    </div>
                 </div>
-            </div>
-            
-            <div class="hover-box">
-                <h3>Freelancer - Upwork</h3>
-                <div class="date">2023 - Present</div>
-                <div class="description">
-                    • Built a Python Application for automatic news extraction and display from skynews.au<br>
-                    • Built a data scraper for a real estate website
+                
+                <div class="timeline-dot" style="top: 280px;"></div>
+                <div class="hover-box">
+                    <h3>Freelancer - Upwork</h3>
+                    <div class="date">2023 - Present</div>
+                    <div class="description">
+                        • Built a Python Application for automatic news extraction and display from skynews.au<br>
+                        • Built a data scraper for a real estate website
+                    </div>
                 </div>
             </div>
         </div>
@@ -253,21 +424,33 @@
         <div class="container">
             <h1>Projects<br>Highlight</h1>
             
-            <div class="hover-box">
-                <h3>AI Generated Image Detection</h3>
-                <div class="date">Final Year Major Project</div>
-                <div class="description">
-                    • Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP<br>
-                    • Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model
+            <div class="project-box">
+                <div class="project-photo">
+                    <!-- Project image will go here -->
+                    <!-- <img src="path/to/project1-image.jpg" alt="AI Generated Image Detection Project"> -->
+                </div>
+                <div class="project-content">
+                    <h3>AI Generated Image Detection</h3>
+                    <div class="date">Final Year Major Project</div>
+                    <div class="description">
+                        • Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP<br>
+                        • Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model
+                    </div>
                 </div>
             </div>
             
-            <div class="hover-box">
-                <h3>Cross Platform Fingerprint Matching Using CNN</h3>
-                <div class="date">Third Year Minor Project</div>
-                <div class="description">
-                    • Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match<br>
-                    • Achieved 89.2% accuracy
+            <div class="project-box">
+                <div class="project-photo">
+                    <!-- Project image will go here -->
+                    <!-- <img src="path/to/project2-image.jpg" alt="Fingerprint Matching Project"> -->
+                </div>
+                <div class="project-content">
+                    <h3>Cross Platform Fingerprint Matching Using CNN</h3>
+                    <div class="date">Third Year Minor Project</div>
+                    <div class="description">
+                        • Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match<br>
+                        • Achieved 89.2% accuracy
+                    </div>
                 </div>
             </div>
         </div>
