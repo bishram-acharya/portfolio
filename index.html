@@ -35,46 +35,128 @@
         .navbar ul li {
             white-space: nowrap;
         }
-        /* Timeline styles */
-        .timeline {
+        
+        /* Hover Box Styles */
+        .hover-box {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
             position: relative;
-            padding-left: 30px;
-            margin-bottom: 40px;
+            overflow: hidden;
         }
-        .timeline:before {
+        
+        .hover-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #333;
+        }
+        
+        .hover-box:before {
             content: '';
             position: absolute;
-            left: 0;
             top: 0;
-            height: 100%;
-            width: 2px;
-            background: #e0e0e0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #333, #666);
+            transition: left 0.3s ease;
         }
-        .timeline-header {
-            position: relative;
+        
+        .hover-box:hover:before {
+            left: 0;
         }
-        .timeline-header:before {
-            content: '';
-            position: absolute;
-            left: -34px;
-            top: 50%;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #333;
-            transform: translateY(-50%);
+        
+        .hover-box h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 1.3em;
+            font-weight: 700;
         }
-        .timeline-content {
-            padding-left: 0;
-        }
-        .timeline-date {
+        
+        .hover-box .date {
             color: #666;
-            margin-top: 5px;
             font-size: 0.9em;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
+        
+        .hover-box .description {
+            color: #4e4e4e;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .hover-box .institution {
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .hover-box .details {
+            color: #666;
+            font-style: italic;
+        }
+        
         /* Section spacing */
         .section {
             margin-bottom: 60px;
+        }
+        
+        /* Remove old timeline styles for sections with hover boxes */
+        .hover-section .timeline {
+            display: none;
+        }
+        
+        /* Skills section special styling */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-box {
+            background: #f8f9fa;
+            border-left: 4px solid #333;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-box:hover {
+            background: #fff;
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .skill-items {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hover-box {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -121,131 +203,94 @@
     </div>
 
     <!-- Education Section -->
-    <div class="work section second" id="education">
+    <div class="work section second hover-section" id="education">
         <div class="container">
             <h1>Education</h1>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">BE in Computer Engineering</a></h3>
-                    <div class="timeline-date">2019 - 2024</div>
-                </div>
-                <div class="timeline-content">
-                    <p>Pulchowk Campus, Institute of Engineering</p>
-                    <p>Major: Computer Engineering | Average Score 80%</p>
-                </div>
+            
+            <div class="hover-box">
+                <h3>BE in Computer Engineering</h3>
+                <div class="date">2019 - 2024</div>
+                <div class="institution">Pulchowk Campus, Institute of Engineering</div>
+                <div class="details">Major: Computer Engineering | Average Score 80%</div>
             </div>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">Higher Secondary Education</a></h3>
-                    <div class="timeline-date">2017 - 2019</div>
-                </div>
-                <div class="timeline-content">
-                    <p>St. Xavier's College, Maitighar</p>
-                    <p>Science Stream | GPA: 3.9/4.0</p>
-                </div>
+            
+            <div class="hover-box">
+                <h3>Higher Secondary Education</h3>
+                <div class="date">2017 - 2019</div>
+                <div class="institution">St. Xavier's College, Maitighar</div>
+                <div class="details">Science Stream | GPA: 3.9/4.0</div>
             </div>
         </div>
     </div>
 
     <!-- Work Experience -->
-    <div class="work section second" id="experiences">
+    <div class="work section second hover-section" id="experiences">
         <div class="container">
             <h1>Work<br>Experiences</h1>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">Research Intern - NAAMII</a></h3>
-                    <div class="timeline-date">Sept 2024 - Present</div>
-                </div>
-                <div class="timeline-content">
-                    <p>- Built pipeline for ISIC skin lesion classification challenge</p>
-                    <p>- Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement</p>
+            
+            <div class="hover-box">
+                <h3>Research Intern - NAAMII</h3>
+                <div class="date">Sept 2024 - Present</div>
+                <div class="description">
+                    • Built pipeline for ISIC skin lesion classification challenge<br>
+                    • Developing domain knowledge in Vision-Language Models and Active Learning via ongoing research engagement
                 </div>
             </div>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">Freelancer - Upwork</a></h3>
-                    <div class="timeline-date">2023 - Present</div>
-                </div>
-                <div class="timeline-content">
-                    <p>- Built a Python Application for automatic news extraction and display from skynews.au.</p>
-                    <p>- Built a data scraper for a real estate website</p>
+            
+            <div class="hover-box">
+                <h3>Freelancer - Upwork</h3>
+                <div class="date">2023 - Present</div>
+                <div class="description">
+                    • Built a Python Application for automatic news extraction and display from skynews.au<br>
+                    • Built a data scraper for a real estate website
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Projects Section -->
-    <div class="work section second" id="experiences">
+    <div class="work section second hover-section" id="projects">
         <div class="container">
             <h1>Projects<br>Highlight</h1>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">AI Generated Image Detection</a></h3>
-                    <div class="timeline-date">Final Year Major Project</div>
-                </div>
-                <div class="timeline-content">
-                    <p>- Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP</p>
-                    <p>- Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model</p>
+            
+            <div class="hover-box">
+                <h3>AI Generated Image Detection</h3>
+                <div class="date">Final Year Major Project</div>
+                <div class="description">
+                    • Compared performance of frequency based network(FourierNet) with CLIP and our SpectrCLIP<br>
+                    • Achieved F1 Score of 0.9877 and AUC 0.9993 with the best performing model
                 </div>
             </div>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">Cross Platform Fingerprint Matching Using CNN</a></h3>
-                    <div class="timeline-date">Third Year Minor Project</div>
-                </div>
-                <div class="timeline-content">
-                    <p>- Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match.</p>
-                    <p>- Achieved 89.2% accuracy</p>
+            
+            <div class="hover-box">
+                <h3>Cross Platform Fingerprint Matching Using CNN</h3>
+                <div class="date">Third Year Minor Project</div>
+                <div class="description">
+                    • Trained a siamese network made of a couple of VGG-16s and DenseNet to determine whether the two given fingerprints are match or no match<br>
+                    • Achieved 89.2% accuracy
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Events Section -->
-<!--     <div class="work section second" id="events">
-        <div class="container">
-            <h1>Events &amp;<br>Workshops</h1>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">AI Summit Nepal 2024</a></h3>
-                    <div class="timeline-date">March 2024</div>
-                </div>
-                <div class="timeline-content">
-                    <p>Presented research on AI-generated image detection methods</p>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3><a href="#">Deep Learning Workshop</a></h3>
-                    <div class="timeline-date">January 2024</div>
-                </div>
-                <div class="timeline-content">
-                    <p>Conducted a 3-day workshop on PyTorch and Computer Vision</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <!-- Award & Achievements -->
-    <div class="award section second" id="achievements">
+    <div class="award section second hover-section" id="achievements">
         <div class="container">
-            <h1>Certifications &amp;<br>Achievements</h1>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3>Deep Learning Specialization</h3>
-                    <div class="timeline-date">Coursera - Andrew Ng</div>
-                </div>
-                <div class="timeline-content">
-                    <p><a href="https://www.credly.com/badges/9262f133-db26-4428-baa8-0cf9e496a2a0/linked_in_profile">View Certificate</a></p>
+            <h1>Certifications &<br>Achievements</h1>
+            
+            <div class="hover-box">
+                <h3>Deep Learning Specialization</h3>
+                <div class="date">Coursera - Andrew Ng</div>
+                <div class="description">
+                    <a href="https://www.credly.com/badges/9262f133-db26-4428-baa8-0cf9e496a2a0/linked_in_profile" target="_blank">View Certificate</a>
                 </div>
             </div>
-            <div class="timeline">
-                <div class="timeline-header">
-                    <h3>Artificial Intelligence Course</h3>
-                    <div class="timeline-date">Samsung Innovation Campus</div>
-                </div>
-                <div class="timeline-content">
-                    <p><a href="https://raw.githubusercontent.com/bishram-acharya/Samsung-Innovation-Campus-Applied-Data-Science/refs/heads/main/cert.jpg">View Certificate</a></p>
+            
+            <div class="hover-box">
+                <h3>Artificial Intelligence Course</h3>
+                <div class="date">Samsung Innovation Campus</div>
+                <div class="description">
+                    <a href="https://raw.githubusercontent.com/bishram-acharya/Samsung-Innovation-Campus-Applied-Data-Science/refs/heads/main/cert.jpg" target="_blank">View Certificate</a>
                 </div>
             </div>
         </div>
@@ -255,18 +300,20 @@
     <div class="skills section second" id="skills">
         <div class="container">
             <h1>Technical<br>Skills</h1>
-            <ul class="skill-list list-flat">
-                <li>Programming</li>
-                <li>Python/ C++/ C</li>
-            </ul>
-            <ul class="skill-list list-flat">
-                <li>Database</li>
-                <li>MySQL/ NoSQL</li>
-            </ul>
-            <ul class="skill-list list-flat">
-                <li>Framework and Libraries</li>
-                <li>Pandas/ Numpy/ Matplotlib/ PyTorch/ TensorFlow/ OpenCV</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <div class="skill-category">Programming</div>
+                    <div class="skill-items">Python / C++ / C</div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-category">Database</div>
+                    <div class="skill-items">MySQL / NoSQL</div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-category">Framework and Libraries</div>
+                    <div class="skill-items">Pandas / Numpy / Matplotlib / PyTorch / TensorFlow / OpenCV</div>
+                </div>
+            </div>
         </div>
     </div>
 
