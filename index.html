@@ -160,54 +160,22 @@
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             margin-top: 2rem;
         }
 
         .project-category {
-            background: #ffffff;
-            border: 2px solid #e2e8f0;
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .project-category:hover {
-            border-color: #cbd5e0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            padding: 0;
         }
 
         .project-category h3 {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #3182ce;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e2e8f0;
             color: #1a252f;
-            font-size: 1.375rem;
             font-weight: 600;
-            position: relative;
-        }
-
-        .project-category h3::before {
-            content: '🔬';
-            margin-right: 0.5rem;
-        }
-
-        .project-category:last-child h3::before {
-            content: '💻';
-        }
-
-        .project-category h3::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #3182ce;
-            border-radius: 2px;
+            text-align: left;
         }
 
         .project-card {
@@ -481,7 +449,7 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
             }
 
             .navbar ul {
