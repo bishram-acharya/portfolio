@@ -160,15 +160,54 @@
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             margin-top: 2rem;
+        }
+
+        .project-category {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .project-category:hover {
+            border-color: #cbd5e0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         .project-category h3 {
             text-align: center;
             margin-bottom: 2rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 3px solid #3182ce;
+            color: #1a252f;
+            font-size: 1.375rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .project-category h3::before {
+            content: '🔬';
+            margin-right: 0.5rem;
+        }
+
+        .project-category:last-child h3::before {
+            content: '💻';
+        }
+
+        .project-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #3182ce;
+            border-radius: 2px;
         }
 
         .project-card {
@@ -302,6 +341,31 @@
             border-radius: 0.5rem;
             border: 1px solid #e2e8f0;
             margin-left: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, rgba(49, 130, 206, 0.1) 0%, rgba(49, 130, 206, 0.05) 100%);
+            transition: width 0.4s ease;
+            z-index: 1;
+        }
+
+        .timeline-item:hover::after {
+            width: 100%;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #3182ce;
         }
 
         .timeline-item::before {
@@ -315,24 +379,37 @@
             border: 3px solid #ffffff;
             border-radius: 50%;
             box-shadow: 0 0 0 3px #e2e8f0;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            background: #2c5aa0;
+            transform: scale(1.2);
         }
 
         .timeline-title {
             font-weight: 600;
             color: #1a252f;
             margin-bottom: 0.25rem;
+            position: relative;
+            z-index: 2;
         }
 
         .timeline-meta {
             color: #718096;
             font-size: 0.875rem;
             margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         .timeline-description {
             color: #4a5568;
             font-size: 0.875rem;
             line-height: 1.6;
+            position: relative;
+            z-index: 2;
         }
 
         /* Skills Grid */
