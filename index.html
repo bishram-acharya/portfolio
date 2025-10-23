@@ -99,18 +99,28 @@
 
         .intro-content {
             display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: 150px 1fr;
             gap: 2rem;
-            align-items: center;
-            max-width: 800px;
+            align-items: start;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .intro img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
+        .intro-image-container {
+            width: 150px;
+            height: 150px;
             border: 3px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .intro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .intro-text h1 {
@@ -447,6 +457,10 @@
                 gap: 1rem;
             }
 
+            .intro-image-container {
+                margin: 0 auto;
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -481,7 +495,7 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#publications">Publications</a></li>
+                    <!-- <li><a href="#publications">Publications</a></li> -->
                     <li><a href="my_cv.pdf" target="_blank">CV</a></li>
                 </ul>
             </nav>
@@ -492,12 +506,14 @@
     <section class="intro" id="about">
         <div class="container">
             <div class="intro-content">
-                <img src="img/bishram.png" alt="Bishram Acharya">
+                <div class="intro-image-container">
+                    <img src="img/bishram.png" alt="Bishram Acharya">
+                </div>
                 <div class="intro-text">
                     <h1>Bishram Acharya</h1>
                     <div class="title">Research Assistant | Computer Engineering Graduate</div>
                     <div class="description">
-                        Computer Engineering graduate from Pulchowk Campus, Institute of Engineering, Nepal. Research Assistant at NAAMII's TOGAI Lab, focusing on medical imaging AI and neural cellular automata for edge device deployments. Experienced in deep learning, computer vision, and developing AI solutions for healthcare in rural settings. <a href="#connect">Connect with me</a>
+                        Computer Engineering graduate from Pulchowk Campus, Institute of Engineering, Nepal. Research Assistant at NAAMII's TOGAI Lab, focusing on medical imaging AI. Experienced in deep learning, computer vision, and developing AI solutions for healthcare in rural settings. <a href="#connect">Connect with me</a>
                     </div>
                 </div>
             </div>
@@ -797,7 +813,7 @@
     </section>
 
     <!-- Publications -->
-    <section class="section" id="publications">
+    <!-- <section class="section" id="publications">
         <div class="container">
             <div class="section-header">
                 <h2>Certifications & Achievements</h2>
@@ -828,7 +844,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
