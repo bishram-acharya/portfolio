@@ -8,21 +8,21 @@
     <meta name="author" content="Bishram Acharya">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
-    <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap' rel='stylesheet'>
     <style>
         :root {
-            --bg:       #faf7f2;
+            --bg:       #f2f4f5;
             --bg-2:     #ffffff;
-            --bg-3:     #f0ebe1;
-            --border:   rgba(30,25,18,0.07);
-            --border-h: rgba(30,25,18,0.18);
-            --text-1:   #1c1a16;
-            --text-2:   #5c5548;
-            --text-3:   #9a9087;
-            --accent:   #6b5240;
-            --accent-2: #3d7a6b;
+            --bg-3:     #e7ebed;
+            --border:   rgba(23,32,35,0.08);
+            --border-h: rgba(23,32,35,0.20);
+            --text-1:   #1a2326;
+            --text-2:   #56646b;
+            --text-3:   #8e9ba0;
+            --accent:   #2f7d74;
+            --accent-2: #55707a;
             --love:     #b85252;
-            --grad:     linear-gradient(135deg, #6b5240 0%, #3d7a6b 100%);
+            --grad:     linear-gradient(135deg, #2f7d74 0%, #55707a 100%);
             --radius:   12px;
         }
 
@@ -43,7 +43,7 @@
         ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-weight: 600;
             color: var(--text-1);
         }
@@ -59,7 +59,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(250,247,242,0.94);
+            background: rgba(242,244,245,0.94);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border);
@@ -74,7 +74,7 @@
         }
 
         .nav-brand {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-weight: 700;
             font-size: 0.9375rem;
             background: var(--grad);
@@ -105,7 +105,7 @@
         }
 
         .navbar ul li a:hover { color: var(--text-1); background: rgba(255,255,255,0.05); }
-        .navbar ul li.active a { color: var(--accent); background: rgba(107,82,64,0.08); }
+        .navbar ul li.active a { color: var(--accent); background: rgba(47,125,116,0.08); }
 
         /* ── HERO ── */
         .intro {
@@ -119,7 +119,7 @@
             position: absolute;
             top: -40%; left: -15%;
             width: 65%; height: 200%;
-            background: radial-gradient(ellipse, rgba(107,82,64,0.1) 0%, transparent 65%);
+            background: radial-gradient(ellipse, rgba(47,125,116,0.1) 0%, transparent 65%);
             pointer-events: none;
         }
 
@@ -128,7 +128,7 @@
             position: absolute;
             bottom: -30%; right: -5%;
             width: 50%; height: 150%;
-            background: radial-gradient(ellipse, rgba(61,122,107,0.07) 0%, transparent 65%);
+            background: radial-gradient(ellipse, rgba(85,112,122,0.07) 0%, transparent 65%);
             pointer-events: none;
         }
 
@@ -225,7 +225,7 @@
             border-color: var(--border-h);
             color: var(--accent) !important;
             -webkit-text-fill-color: var(--accent) !important;
-            background: rgba(107,82,64,0.06);
+            background: rgba(47,125,116,0.06);
             transform: translateY(-1px);
         }
 
@@ -266,14 +266,14 @@
             position: absolute;
             left: 0; top: 10px; bottom: 10px;
             width: 2px;
-            background: linear-gradient(to bottom, #6b5240, #3d7a6b 60%, transparent);
+            background: linear-gradient(to bottom, #2f7d74, #55707a 60%, transparent);
             border-radius: 1px;
         }
 
         .timeline-item {
             position: relative;
             margin-bottom: 1rem;
-            background: rgba(30,25,18,0.02);
+            background: rgba(23,32,35,0.02);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 1.375rem 1.5rem;
@@ -281,8 +281,8 @@
         }
 
         .timeline-item:hover {
-            border-color: rgba(107,82,64,0.28);
-            background: rgba(107,82,64,0.03);
+            border-color: rgba(47,125,116,0.28);
+            background: rgba(47,125,116,0.03);
             transform: translateX(4px);
         }
 
@@ -293,11 +293,11 @@
             width: 10px; height: 10px;
             border-radius: 50%;
             background: var(--grad);
-            box-shadow: 0 0 8px rgba(107,82,64,0.45);
+            box-shadow: 0 0 8px rgba(47,125,116,0.45);
         }
 
         .timeline-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-weight: 600;
             font-size: 0.9875rem;
             color: var(--text-1);
@@ -338,8 +338,8 @@
 
         /* ── PUBLICATION ── */
         .pub-card {
-            background: rgba(107,82,64,0.04);
-            border: 1px solid rgba(107,82,64,0.18);
+            background: rgba(47,125,116,0.04);
+            border: 1px solid rgba(47,125,116,0.18);
             border-radius: var(--radius);
             padding: 1.75rem;
             position: relative;
@@ -358,9 +358,9 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(61,122,107,0.08);
+            background: rgba(85,112,122,0.08);
             color: var(--accent-2);
-            border: 1px solid rgba(61,122,107,0.2);
+            border: 1px solid rgba(85,112,122,0.2);
             border-radius: 6px;
             padding: 0.25rem 0.75rem;
             font-size: 0.75rem;
@@ -371,7 +371,7 @@
         }
 
         .pub-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 1.0625rem;
             font-weight: 600;
             color: var(--text-1);
@@ -392,8 +392,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
-            background: rgba(61,122,107,0.08);
-            border: 1px solid rgba(61,122,107,0.2);
+            background: rgba(85,112,122,0.08);
+            border: 1px solid rgba(85,112,122,0.2);
             color: var(--accent-2);
             padding: 0.25rem 0.75rem;
             border-radius: 6px;
@@ -404,7 +404,7 @@
             width: fit-content;
             transition: all 0.2s;
         }
-        .pub-link:hover { background: rgba(61,122,107,0.15); color: var(--accent-2); }
+        .pub-link:hover { background: rgba(85,112,122,0.15); color: var(--accent-2); }
 
         .pub-bullets {
             list-style: none;
@@ -463,7 +463,7 @@
         .project-card[onclick] { cursor: pointer; }
 
         .project-card:hover {
-            border-color: rgba(107,82,64,0.32);
+            border-color: rgba(47,125,116,0.32);
             box-shadow: 0 8px 32px rgba(0,0,0,0.4);
             transform: translateY(-2px);
         }
@@ -491,7 +491,7 @@
         .project-content { padding: 0.875rem 1.125rem; }
 
         .project-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-1);
@@ -507,7 +507,7 @@
         .project-details {
             position: absolute;
             inset: 0;
-            background: rgba(25,23,36,0.97);
+            background: rgba(17,24,26,0.97);
             padding: 1.25rem;
             opacity: 0;
             transform: translateY(6px);
@@ -515,7 +515,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            border: 1px solid rgba(107,82,64,0.28);
+            border: 1px solid rgba(47,125,116,0.28);
             border-radius: var(--radius);
         }
 
@@ -535,9 +535,9 @@
         .project-tech { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: auto; }
 
         .tech-tag {
-            background: rgba(107,82,64,0.1);
+            background: rgba(47,125,116,0.1);
             color: var(--accent);
-            border: 1px solid rgba(107,82,64,0.18);
+            border: 1px solid rgba(47,125,116,0.18);
             padding: 0.175rem 0.55rem;
             border-radius: 5px;
             font-size: 0.685rem;
@@ -556,7 +556,7 @@
             transition: border-color 0.2s;
         }
 
-        .skill-category:hover { border-color: rgba(107,82,64,0.25); }
+        .skill-category:hover { border-color: rgba(47,125,116,0.25); }
 
         .skill-category h4 {
             font-family: 'JetBrains Mono', monospace;
@@ -595,7 +595,7 @@
         .interest-tag:hover {
             border-color: var(--accent);
             color: var(--accent);
-            background: rgba(107,82,64,0.06);
+            background: rgba(47,125,116,0.06);
         }
 
         /* ── GAME ── */
@@ -795,12 +795,12 @@
         .answer-btn:hover:not(:disabled) {
             border-color: var(--border-h);
             color: var(--text-1);
-            background: rgba(107,82,64,0.06);
+            background: rgba(47,125,116,0.06);
         }
 
         .answer-btn.correct {
             border-color: var(--accent-2) !important;
-            background: rgba(61,122,107,0.12) !important;
+            background: rgba(85,112,122,0.12) !important;
             color: var(--accent-2) !important;
         }
 
@@ -847,7 +847,7 @@
         .lr-step-btn:hover {
             border-color: var(--border-h);
             color: var(--accent);
-            background: rgba(107,82,64,0.08);
+            background: rgba(47,125,116,0.08);
         }
 
         .lr-step-btn:active { transform: scale(0.93); }
@@ -881,7 +881,7 @@
             border-color: var(--accent);
             color: var(--accent) !important;
             -webkit-text-fill-color: var(--accent) !important;
-            background: rgba(107,82,64,0.08);
+            background: rgba(47,125,116,0.08);
             transform: translateY(-2px);
         }
 
@@ -926,7 +926,6 @@
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#certifications">Certifications</a></li>
                         <li><a href="#game">Play</a></li>
-                        <li><a href="my_cv.pdf" target="_blank">CV ↗</a></li>
                     </ul>
                 </nav>
             </div>
@@ -946,11 +945,10 @@
                     <h1>Bishram Acharya</h1>
                     <div class="title"><span>Research Assistant</span> · NAAMII — TOGAI Lab</div>
                     <div class="description">
-                        Computer Engineering graduate (BE) from Pulchowk Campus, IOE, Tribhuvan University. Research Assistant at NAAMII's TOGAI Lab, developing novel AI methods for fetal ultrasound analysis in low-resource clinical settings. Research interests span medical imaging, vision-language models, and self-supervised learning.
+                        Computer Engineering graduate (BE) from Pulchowk Campus, IOE, Tribhuvan University. Research Assistant at NAAMII's TOGAI Lab, developing novel AI methods for fetal ultrasound analysis in low-resource clinical settings. Research interests span self-supervised learning, vision-language models, domain adaptation, and label efficiency.
                     </div>
                     <div class="intro-links">
-                        <a href="my_cv.pdf" target="_blank" class="btn btn-primary"><i class="fa fa-file-text-o"></i> Download CV</a>
-                        <a href="mailto:bisram019@gmail.com" class="btn btn-secondary"><i class="fa fa-envelope-o"></i> Email</a>
+                        <a href="mailto:bisram019@gmail.com" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Email</a>
                         <a href="https://www.linkedin.com/in/bishram-acharya/" target="_blank" class="btn btn-secondary"><i class="fa fa-linkedin"></i> LinkedIn</a>
                         <a href="https://github.com/bishram-acharya" target="_blank" class="btn btn-secondary"><i class="fa fa-github"></i> GitHub</a>
                     </div>
@@ -1028,7 +1026,6 @@
                             <li>Core research direction: Developing novel AI methods to analyse <strong>fetal ultrasound videos</strong> for automated diagnosis in <strong>low-resource clinical settings</strong></li>
                             <li>Contributing to industry R&amp;D collaboration with <strong>GE Healthcare</strong> via NAAMII, working on solving real-world challenges of AI-assisted obstetric ultrasound</li>
                             <li>Monitoring and analysing a <strong>first-of-its-kind</strong> blind sweep fetal video dataset collection, conducted in collaboration with <strong>Institute of Medicine, Nepal</strong></li>
-                            <li>Research spans foundational models, domain adaptation across demographic datasets, label noise robustness, JEPA/world models, active learning, and multi-task learning</li>
                             <li>Co-authored MIDL 2026 paper on automated quality assessment of blind sweep obstetric ultrasound</li>
                         </ul>
                     </div>
@@ -1070,8 +1067,8 @@
                     <div class="timeline-meta"><a href="https://www.upwork.com/freelancers/~01170c58105056f06c">Upwork</a> (Remote) · Nov 2023 – Aug 2024</div>
                     <div class="timeline-description">
                         <ul>
-                            <li>Built a Python application for automated news extraction and structured display from skynews.au</li>
-                            <li>Developed a data scraper for a real estate listings platform</li>
+                            <li>Built a Python application for automated news extraction and structured display from news portals</li>
+                            <li>Developed data scrapers for different platforms</li>
                         </ul>
                     </div>
                 </div>
@@ -1276,13 +1273,6 @@
             <div class="interests-cloud">
                 <span class="interest-tag">Self-supervised Learning</span>
                 <span class="interest-tag">Vision-Language Models</span>
-                <span class="interest-tag">World Models</span>
-                <span class="interest-tag">Neural Cellular Automata</span>
-                <span class="interest-tag">Domain Adaptation</span>
-                <span class="interest-tag">Medical Imaging</span>
-                <span class="interest-tag">Multimodal Representation Learning</span>
-                <span class="interest-tag">Active Learning</span>
-                <span class="interest-tag">Learning with Label Noise</span>
             </div>
         </div>
     </section>
@@ -1482,7 +1472,7 @@
             ];
 
             // ── State ──
-            let theta = xMin + 1.0, ballDisplayTheta = xMin + 1.0;
+            let theta = xMin + 2.0, ballDisplayTheta = xMin + 2.0;
             let trail = [], lr = 0;
             const LR_SCALE = 100;
             let steps = 0, streak = 0, consecInMin = 0;
@@ -1558,22 +1548,22 @@
             function draw() {
                 const W=cW(), dt=ballDisplayTheta;
                 ctx.clearRect(0,0,W,H);
-                ctx.fillStyle='#f5f0e7'; ctx.fillRect(0,0,W,H);
-                ctx.strokeStyle='rgba(30,25,18,0.04)'; ctx.lineWidth=1;
+                ctx.fillStyle='#eef1f2'; ctx.fillRect(0,0,W,H);
+                ctx.strokeStyle='rgba(23,32,35,0.04)'; ctx.lineWidth=1;
                 for(let x=Math.ceil(xMin);x<=Math.floor(xMax);x++){ctx.beginPath();ctx.moveTo(cx(x),0);ctx.lineTo(cx(x),H);ctx.stroke();}
                 for(let y=1;y<=6;y++){ctx.beginPath();ctx.moveTo(0,cy(y));ctx.lineTo(W,cy(y));ctx.stroke();}
                 ctx.save(); ctx.beginPath(); ctx.rect(0,0,W,H); ctx.clip();
-                ctx.setLineDash([3,5]); ctx.strokeStyle='rgba(61,122,107,0.22)'; ctx.lineWidth=1;
+                ctx.setLineDash([3,5]); ctx.strokeStyle='rgba(85,112,122,0.22)'; ctx.lineWidth=1;
                 ctx.beginPath(); ctx.moveTo(cx(gMinX),cy(gMinY)-4); ctx.lineTo(cx(gMinX),H); ctx.stroke();
                 ctx.setLineDash([]);
                 if(trail.length>1){
-                    ctx.beginPath(); ctx.strokeStyle='rgba(107,82,64,0.25)'; ctx.lineWidth=1.5;
+                    ctx.beginPath(); ctx.strokeStyle='rgba(47,125,116,0.25)'; ctx.lineWidth=1.5;
                     let ft=true;
                     trail.forEach(t=>{ft?ctx.moveTo(cx(t),cy(L(t))):ctx.lineTo(cx(t),cy(L(t)));ft=false;});
                     ctx.stroke();
                 }
                 const grad=ctx.createLinearGradient(0,0,W,0);
-                grad.addColorStop(0,'#6b5240'); grad.addColorStop(1,'#3d7a6b');
+                grad.addColorStop(0,'#2f7d74'); grad.addColorStop(1,'#55707a');
                 ctx.beginPath(); ctx.strokeStyle=grad; ctx.lineWidth=2.5;
                 let first=true;
                 for(let px=0;px<=W;px++){
@@ -1582,7 +1572,7 @@
                 }
                 ctx.stroke(); ctx.restore();
                 ctx.beginPath(); ctx.arc(cx(gMinX),cy(gMinY),4.5,0,Math.PI*2);
-                ctx.fillStyle='rgba(61,122,107,0.65)'; ctx.fill();
+                ctx.fillStyle='rgba(85,112,122,0.65)'; ctx.fill();
                 const bx=cx(dt), by=cy(L(dt));
                 if(by>-12&&by<H+12){
                     const glowR=Math.min(12+streak*1.5,26);
@@ -1594,10 +1584,10 @@
                     ctx.strokeStyle='rgba(160,80,80,0.75)'; ctx.lineWidth=1.5; ctx.stroke();
                 }
                 ctx.font='10px JetBrains Mono, monospace';
-                ctx.fillStyle='rgba(61,122,107,0.42)';
+                ctx.fillStyle='rgba(85,112,122,0.42)';
                 ctx.fillText('★ global min',cx(gMinX)+7,cy(gMinY)-5);
                 if(by>12&&by<H-12){ctx.fillStyle='rgba(160,80,80,0.7)';ctx.fillText('θ',bx+9,by-5);}
-                ctx.fillStyle='rgba(92,85,72,0.5)'; ctx.font='10px Inter, sans-serif';
+                ctx.fillStyle='rgba(86,100,107,0.5)'; ctx.font='10px Inter, sans-serif';
                 ctx.fillText('Parameters (θ)',W/2-42,H-7);
                 ctx.save(); ctx.translate(10,H/2+28); ctx.rotate(-Math.PI/2);
                 ctx.fillText('Loss L(θ)',0,0); ctx.restore();
